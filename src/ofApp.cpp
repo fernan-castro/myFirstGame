@@ -2,9 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetBackgroundColor(255, 0, 0);
-    x = ofGetWidth();
-    y = ofGetHeight();
+    ofSetBackgroundColor(255, 0, 0); // background color to red
+    x = ofGetWidth() / 2; // x pos of player
+    y = ofGetHeight() / 2; // y pos of player
     
 }
 
@@ -15,22 +15,24 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofDrawBitmapString("fefe", x / 2, y / 2);
-    ofDrawRectangle(x / 2, y / 2, 50, 50);
+    ofDrawBitmapString("fefe", x + 5, y); // player name
+    ofDrawRectangle(x, y, size, size); // starting pos of player
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if (key == 'w') {
+
+    // movement
+    if (key == 'w' && y > 0) {
         y -= 10;
     }
-    if (key == 'd') {
+    else if (key == 'd' && x + size < ofGetWidth()) {
         x += 10;
     }
-    if (key == 'a') {
+    else if (key == 'a'&& x > 0) {
         x -= 10;
     }
-    if (key == 's') {
+    else if (key == 's' && y + size < ofGetHeight()) {
         y += 10;
     }
 }
