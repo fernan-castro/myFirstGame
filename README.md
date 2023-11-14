@@ -2,7 +2,7 @@
 
 this is an attempt in making a simple game using C++ and openframeworks
 
-objectives:
+objectives:  
 [ ] add your own username to player  
 [ ] adding player sprites  
 [ ] adding enemies  
