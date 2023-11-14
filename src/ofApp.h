@@ -32,4 +32,6 @@ class ofApp : public ofBaseApp{
 		MainMenu *mainMenu;
 		GameMenu *gameMenu;
 
+		ofSoundPlayer sound;
+
 };

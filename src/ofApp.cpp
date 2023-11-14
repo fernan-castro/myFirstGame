@@ -12,6 +12,9 @@ void ofApp::setup(){
     mainMenu = new MainMenu();
     gameMenu = new GameMenu();
     currentMenu = mainMenu;
+
+    sound.load("menu.flac");
+    sound.play();
 }
 
 //--------------------------------------------------------------
