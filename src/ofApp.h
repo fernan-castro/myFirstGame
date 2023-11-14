@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Menu.h"
+#include "MainMenu.h"
+#include "GameMenu.h"
 
 
 class ofApp : public ofBaseApp{
@@ -22,7 +25,11 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		int x, y; // position of player
-		int size = 50; // size of player
+		// int x, y; // position of player
+		// int size = 50; // size of player
 		
+		Menu *currentMenu;
+		MainMenu *mainMenu;
+		GameMenu *gameMenu;
+
 };
